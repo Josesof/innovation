@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="myForm" autocomplete="off">
+                <div class="row">
+
+                    <div class="col-md-3 ">
+                    <mat-form-field appearance="fill" class="fecha-inicial">
+                        <mat-label>Fecha Inicial</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="fill" class="fecha-final">
+                            <mat-label>Fecha Final</mat-label>
+                            <input matInput [matDatepicker]="pickerr">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="pickerr"></mat-datepicker-toggle>
+                            <mat-datepicker #pickerr></mat-datepicker>
+                          </mat-form-field>
+                        </div>
+
+
+                    <div class="col-md-3">
+                        <select class="form-select form-select-lg mb-2" aria-label=".form-select-lg example">
+                            <option selected>Sensor</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Variable</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div></div>
+
+</div>

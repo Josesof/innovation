@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="client">
+                <span class="principal">{{accion}}</span>
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <form [formGroup]="myForm" autocomplete="off">
+                    <div class="row">
+                        <div class="col-lg-8">
+
+                            <mat-form-field class="examle-container" [style.fontSize.px]=15>
+                                <mat-label>ID Sistem</mat-label>
+                                <input matInput formControlName="idSistem" placeholder="Codigo Identificador...">
+                            </mat-form-field>
+                            <div *ngIf="myForm.controls['idSistem'].hasError('required') && myForm.controls['idSistem'].touched"
+                                style="margin-top: -15px;">
+                                <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                            </div>
+                            <div *ngIf="myForm.controls['idSistem'].hasError('maxlength') && myForm.controls['idSistem'].touched"
+                                style="margin-top: -15px;">
+                                <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                        caracteres</strong></span>
+                            </div>
+                            <div *ngIf="myForm.controls['idSistem'].hasError('minlength') && myForm.controls['idSistem'].touched"
+                                style="margin-top: -15px;">
+                                <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                        caracteres</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <mat-form-field class="examle-container" [style.fontSize.px]=15>
+                                    <mat-label>Nombre</mat-label>
+                                    <input matInput formControlName="nombre" placeholder="Nombre..">
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['nombre'].hasError('required') && myForm.controls['nombre'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['nombre'].hasError('maxlength') && myForm.controls['nombre'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['nombre'].hasError('minlength') && myForm.controls['nombre'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <mat-form-field class="examle-container" [style.fontSize.px]=15>
+                                    <mat-label>Longitud</mat-label>
+                                    <input matInput formControlName="longitud" placeholder="Longitud..">
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['longitud'].hasError('required') && myForm.controls['longitud'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['longitud'].hasError('maxlength') && myForm.controls['longitud'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['longitud'].hasError('minlength') && myForm.controls['longitud'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <mat-form-field class="examle-container" [style.fontSize.px]=15>
+                                    <mat-label>Latitud</mat-label>
+                                    <input matInput formControlName="longitud" placeholder="Latitud..">
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['longitud'].hasError('required') && myForm.controls['longitud'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['longitud'].hasError('maxlength') && myForm.controls['longitud'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['longitud'].hasError('minlength') && myForm.controls['longitud'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label> Variable </mat-label>
+                                    <mat-select formControlName="variable">
+                                        <mat-option *ngFor="let variable of variableApi" [value]="variable">
+                                            {{variable}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['variable'].hasError('required') && myForm.controls['variable'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button mat-raised-button color='warn'(click)="saveCapture()">GUARDAR</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button mat-raised-button color='primary'
+                                    routerLink="/general/1/configuracion/captureList">CANCELAR</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

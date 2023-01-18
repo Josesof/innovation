@@ -1,0 +1,9 @@
+mat-form-field {
+    margin-right: 1px;
+  }
+
+
+  .fecha-inicial,.fecha-final {
+    height: 6px;
+    width: 120px;
+  }

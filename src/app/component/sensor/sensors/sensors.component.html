@@ -1,0 +1,155 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="client">
+                <span class="principal">{{accion}}</span>
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <form [formGroup]="myForm" autocomplete="off">
+                    <div class="row">
+                        <div class="col-lg-8">
+
+                            <mat-form-field class="examle-container" [style.fontSize.px]=15>
+                                <mat-label>ID Sistem</mat-label>
+                                <input matInput formControlName="idSistem" placeholder="Codigo Identificador...">
+                            </mat-form-field>
+                            <div *ngIf="myForm.controls['idSistem'].hasError('required') && myForm.controls['idSistem'].touched"
+                                style="margin-top: -15px;">
+                                <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                            </div>
+                            <div *ngIf="myForm.controls['idSistem'].hasError('maxlength') && myForm.controls['idSistem'].touched"
+                                style="margin-top: -15px;">
+                                <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                        caracteres</strong></span>
+                            </div>
+                            <div *ngIf="myForm.controls['idSistem'].hasError('minlength') && myForm.controls['idSistem'].touched"
+                                style="margin-top: -15px;">
+                                <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                        caracteres</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <mat-form-field class="examle-container" [style.fontSize.px]=15>
+                                    <mat-label>Nombre Sensor</mat-label>
+                                    <input matInput formControlName="nombreSensor" placeholder="nombreSensor..">
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['nombreSensor'].hasError('required') && myForm.controls['nombreSensor'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['nombreSensor'].hasError('maxlength') && myForm.controls['nombreSensor'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['nombreSensor'].hasError('minlength') && myForm.controls['nombreSensor'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <mat-form-field class="examle-container" [style.fontSize.px]=15>
+                                    <mat-label>Color</mat-label>
+                                    <input matInput formControlName="color" placeholder="color..">
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['color'].hasError('required') && myForm.controls['color'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['color'].hasError('maxlength') && myForm.controls['color'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                                <div *ngIf="myForm.controls['color'].hasError('minlength') && myForm.controls['color'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">El campo debe tener como minimo <strong> 8
+                                            caracteres</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label> Variable </mat-label>
+                                    <mat-select formControlName="variable">
+                                        <mat-option *ngFor="let variable of variableApi" [value]="variable">
+                                            {{variable}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['variable'].hasError('required') && myForm.controls['variable'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label> Sitio Captura Dato </mat-label>
+                                    <mat-select formControlName="sitioCapturaDato">
+                                        <mat-option *ngFor="let sitioCapturaDato of sitioCapturaApi"
+                                            [value]="sitioCapturaDato">
+                                            {{sitioCapturaDato}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['sitioCapturaDato'].hasError('required') && myForm.controls['sitioCapturaDato'].touched"
+                                    style="margin-top: -15px;">
+                                    <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Activar
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Desactivar
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+            
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button mat-raised-button color='warn'(click)="saveCapture()">GUARDAR</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button mat-raised-button color='primary'
+                                    routerLink="/general/1/configuracion/captureList">CANCELAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

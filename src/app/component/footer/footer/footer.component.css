@@ -1,0 +1,60 @@
+.footer,
+.row {
+  margin-top: auto;
+  color: aliceblue;
+  background: #021b79; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #021b79,
+    #021b79
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #021b79,
+    #021b79
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.texto {
+  padding-left: 1rem;
+  padding-top: 0.2rem;
+  font-size: small;
+}
+
+.titulo {
+  padding-left: 1rem;
+  font-family: "Alice", serif;
+  font-family: "Changa", sans-serif;
+  font-family: "Lexend Tera", sans-serif;
+  font-family: "Public Sans", sans-serif;
+  font-family: "Rowdies", cursive;
+  text-decoration: none;
+  padding-top: 25px;
+  color: aliceblue;
+}
+
+.sun {
+  height: 20px;
+  width: 20px;
+}
+
+li{
+  display: inline;
+  padding: 0.2rem;
+  
+}
+
+li:hover {
+	background-color: rgb(246, 241, 237);
+    border-radius: 2rem;
+}
+
+ul {
+    padding-top: 0.3rem;
+    padding-left:  0.7rem;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(233, 112, 13);
+}

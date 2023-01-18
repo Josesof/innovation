@@ -1,0 +1,39 @@
+
+  <div class="row">
+    <div class="p  col-md-2 ">
+      <a [routerLink]="['clientList']" class="titulo-a ">
+        <br>
+        <span class="titulo-nexos">
+          NEXOS
+        </span>
+        <p class="contenido">Soluciones agiles e innovadoras de tecnologia</p>
+      </a>
+    </div>
+    
+    <div class="p p-2 mensaje col-md-8">
+      <p class="parafo">Bienvenido <span>{{usuario}} <br></span>Hoy es <span> {{date | date: 'EEEE, d De MMMM De yyyy H : mm a ':undefined:'es' | titlecase }}  </span> 
+        <img src="assets/img/sun.png" class="sun" alt="...">
+      </p>
+    </div>
+    <div class="p loguin col-md-2">
+      <div class="door">
+        <img src="assets/img/door.png" class="sun" alt="...">
+      </div>
+      
+      <ul class="navbar-nav  ">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle log" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Loguin
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Registro</a></li>
+            <li><a class="dropdown-item" href="#">Ingresa</a></li>
+            <li><a class="dropdown-item" href="#">Salir</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+

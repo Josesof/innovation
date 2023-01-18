@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url("assets/img/prueba_fondo_6.jpg");
+  background-repeat: no-repeat;
+
+}
+
+
+mat-toolbar {
+  border-radius: 20px;
+}
+
+.mat-simple-snackbar span {
+  margin: auto;
+  text-align: center;
+}
+
+.button:focus {
+  outline: none;
+}
+
+h1 {
+  font-family: "Alice", serif;
+  font-family: "Changa", sans-serif;
+  font-family: "Lexend Tera", sans-serif;
+  font-family: "Public Sans", sans-serif;
+  font-family: "Rowdies", cursive;
+  font-weight: 300;
+  color: rgb(233, 112, 13);
+  margin: auto;
+  text-align: center;
+}
+
+
+.pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+img {
+    border-radius: 10px;
+    width: 50%;
+    height: 70%;
+}
+span { 
+    margin: auto;
+    text-align: center;
+}
+
+.examle-container {
+    width: 100%;
+}
+
+.cancelar {
+    margin: 18px;
+}
+
+.mda-form-msg {
+    color: red;
+}
+
+.client{
+    text-align: center;
+}
+
+.cliente {
+    padding-top: 25px;
+}
+
+
+h1 {
+    font-family: "Alice", serif;
+    font-family: "Changa", sans-serif;
+    font-family: "Lexend Tera", sans-serif;
+    font-family: "Public Sans", sans-serif;
+    font-family: "Rowdies", cursive;
+    font-weight: 300;
+    color: rgb(233, 112, 13);
+    margin: auto;
+    text-align: center;
+  }
+  
+

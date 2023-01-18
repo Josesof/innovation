@@ -1,0 +1,61 @@
+.navegacion {
+  height: 100px;
+  background-color: #f6f7f8;
+}
+
+.p {
+    background: #021b79; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021b79, #021b79); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,  #021b79, #021b79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+img {
+  height: 104px;
+  width: 170px;
+}
+
+.sun {
+  height: 30px;
+  width: 30px;
+}
+
+p,
+span {
+  color: aliceblue;
+}
+
+.log {
+  color: aliceblue;
+}
+li {
+  color: black;
+}
+
+.parafo,
+.door {
+  padding-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.contenido {
+    font-size: 9px;
+    margin-bottom: 12px;
+}
+
+.titulo-nexos {
+  font-size: 30px;
+    font-family: "Alice", serif;
+    font-family: "Changa", sans-serif;
+    font-family: "Lexend Tera", sans-serif;
+    font-family: "Public Sans", sans-serif;
+    font-family: "Rowdies", cursive;
+    text-decoration: none;
+    color: aliceblue; }
+
+
+
+

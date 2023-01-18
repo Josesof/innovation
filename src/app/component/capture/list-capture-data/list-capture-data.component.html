@@ -1,0 +1,106 @@
+<div class="container">
+
+    <div >
+        <h1 class="list-users">
+            {{titulo}}
+        </h1>
+    </div>
+
+
+    <br>
+ 
+
+    <div class="save" style="text-align: right;">
+        <button mat-raised-button color='warn' routerLink="/createCapture">Crear Sitio</button>
+    </div>
+
+    <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filtro" autocomplete="off" #input>
+    </mat-form-field>
+
+    <div class="container">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+              <!-- Position Column -->
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Cod Id</th>
+                <td mat-cell *matCellDef="let element"> {{element.id }} </td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre</th>
+                <td mat-cell *matCellDef="let element"> {{element.nombre }} </td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="longitud">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Longitud </th>
+                <td mat-cell *matCellDef="let element"> {{element.longitud }} </td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="latitud">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Latitud </th>
+                <td mat-cell *matCellDef="let element"> {{element.latitud }} </td>
+            </ng-container>
+
+              <!-- Position Column -->
+              <ng-container matColumnDef="variable">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> variable </th>
+                <td mat-cell *matCellDef="let element"> {{element.variable }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="sitioCaptura">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Sitio Captura </th>
+                <td mat-cell *matCellDef="let element"> {{element.sitioCaptura }} </td>
+            </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="estado">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Accion </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Activar
+                            </label>
+                          </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Desactivar
+                            </label>
+                          </div>
+                        
+                        
+                    </td>
+                </ng-container>
+
+
+
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="gestion">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Gestion </th>
+                <td mat-cell *matCellDef="let element">
+                  
+                    <span>editar</span>
+
+                    <a class="pointer marge2" [routerLink]="['/createCapture',element.id]"
+                        style="color:rgb(56, 19, 221)">
+                        <img src="assets/img/edit2.png" class="sun" alt="...">
+                    </a>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <br>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</div>

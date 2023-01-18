@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row">
+            <div class="col-md-4  p-2 dasboard">
+                <a class="pointer" (click)="visualization()"type="button">
+                    <p><span>DASHBOARD</span> </p>
+                </a>
+            </div>
+            <div class="col-md-4 p-2 data">
+                <a class="pointer" (click)="tableData()" type="button">
+                    <p><span>TABLA DE DATOS</span> </p>
+                </a>
+            </div>
+    </div>
+
+<!-- INICIO-->
+
+<br>
+<div class="container">
+    <div class="row">
+
+        <h1>Nombre Del Cliente</h1>
+        <br>
+
+        <mat-form-field>
+            <mat-label>Filtro</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Filtro" autocomplete="off" #input>
+        </mat-form-field>
+
+        <div class="container">
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="variable">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Variables</th>
+                    <td mat-cell *matCellDef="let element">{{element.nombreVariable}}</td>
+                </ng-container>
+                    <!-- Symbol Column -->
+            <ng-container matColumnDef="active">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Activar
+                        </label>
+                      </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Desactivar
+                        </label>
+                      </div>
+                    
+                </td>
+            </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <br>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                aria-label="Select page of periodic elements">
+            </mat-paginator>
+        </div>
+
+    </div>
+    </div>
+
+
+<!--FIN-->
+
+
+</div>
+

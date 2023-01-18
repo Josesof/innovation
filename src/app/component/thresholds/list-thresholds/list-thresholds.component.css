@@ -1,0 +1,25 @@
+span {
+    margin-left: 12px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .marge {
+    margin-left: 2px;
+  }
+  
+  .list-users {
+    text-align: center;
+  }
+  
+  img {
+    height: 25px;
+    width: 25px;
+  }
+  

@@ -1,0 +1,53 @@
+.flex-container {
+    display: flex;
+    align-content: space-between;
+  }
+
+  
+
+a {
+    text-decoration: none;
+}
+
+
+.p-2{
+    background-color: rgb(77, 6, 158);
+    color: rgb(242, 247, 248);
+    text-align: center;
+    border-radius: 10px
+}
+
+
+
+span { 
+    text-align: center;
+    font-size: 14px;
+    color: rgb(242, 247, 248);
+}
+
+
+
+table {
+    width: 100%;
+  }
+
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .list-users {
+    text-align: center;
+  }
+  
+
+  .data {
+    margin-left: 150px;
+  }
+
+  .dasboard{
+    margin-left: 25px;
+  }
+
+
+

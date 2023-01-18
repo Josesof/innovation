@@ -1,0 +1,62 @@
+.flex-container {
+    display: flex;
+    align-content: space-between;
+  }
+
+  
+.boton:hover {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+
+.boton {
+    border-radius: 2px;
+    
+}
+
+.p-2{
+    background-color: rgb(77, 6, 158);
+    color: black;
+    text-align: center;
+    border-radius: 10px
+}
+
+
+
+span { 
+    text-align: center;
+    font-size: 14px;
+    color: rgb(242, 247, 248);
+}
+
+
+
+table {
+    width: 100%;
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .list-users {
+    text-align: center;
+  }
+
+  .a,.b,.c,.d {
+    margin-left: 2px;
+  }
+
+  .a,.b,.c,.d {
+    margin-right: 5px;
+  }

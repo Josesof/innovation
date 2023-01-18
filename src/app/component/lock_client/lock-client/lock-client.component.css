@@ -1,0 +1,84 @@
+
+.boton:hover {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: var(--negro);
+    margin-top: 3rem 0;
+    padding-top: 3rem;
+}
+
+.boton {
+    display: block;
+    border-radius: 2px;
+    
+}
+
+.p-2{
+    background-color: rgb(47, 25, 241);
+    color: black;
+    text-align: center;
+    border-radius: 10px
+}
+
+span {
+    color: rgb(242, 247, 248);
+}
+
+
+span { 
+    margin: auto;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .list-users {
+    text-align: center;
+  }
+
+  
+  h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    color: darkblue;
+    margin: auto;
+    text-align: center;
+  }
+
+  .marge {
+    margin-left:2px;
+  }
+ 
+  .list-users {
+    text-align: center;
+  }
+
+  img {
+    height: 25px;
+    width: 25px;
+  }
+  span { 
+    margin-left: 12px;
+    color: black;
+ }
+
+
+
+
